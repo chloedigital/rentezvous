@@ -60,7 +60,6 @@
 
 .itemgallery .row {
 	width: 800px;
-	margin-top: 20px;
 }
 
 .itemgallery .span4 {
@@ -68,21 +67,42 @@
 	position: relative;
 }
 
-.itemgallery .filter h2{
-	font-family: "Helvetica Neue", Helvetica;
+.sidemenu h2{
 	font-size: 1.4rem;
 	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
 }
 
-.itemgallery .filter ul{
+.sidemenu ul{
 	list-style: none;
 	margin: 0;
 }
 
-.itemgallery .filter li{
+.sidemenu li{
 	list-style: none;
 	font-size: 1.2rem;
 	text-transform: uppercase;
+
+}
+
+.process {
+	width: 260px; 
+}
+
+.sidemenu.process li {
+	text-transform: none;
+	margin-bottom: 10px;
+
+}
+
+.sidemenu.process.processmain li{
+	text-transform: uppercase;
+}
+
+.sidemenu.process.processmain a{
+	color: black;
+	cursor: pointer;
+
 }
 
 .itemgallery .rented {
@@ -98,4 +118,9 @@
 	text-align: center;
 	display: block;
 	margin-bottom: 20px;
+}
+
+.hiw .hero-unit{
+	width: 670px;
+	padding: 0px;
 }
