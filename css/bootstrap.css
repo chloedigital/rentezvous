@@ -1075,7 +1075,6 @@ input[type="color"],
 	display: block;
 	height: 20px;
 	padding: 4px 6px;
-	margin-bottom: 10px;
 	font-size: 14px;
 	line-height: 20px;
 	color: #555555;
@@ -1120,6 +1119,8 @@ input[type="color"],
 		 -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
 			 -o-transition: border linear 0.2s, box-shadow linear 0.2s;
 					transition: border linear 0.2s, box-shadow linear 0.2s;
+
+	margin-bottom: 6px;
 }
 
 textarea:focus,

@@ -165,7 +165,7 @@ else if($_POST['submit']=='Register')
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body class="sign">
+	<body class="sign signup">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
@@ -254,7 +254,7 @@ else if($_POST['submit']=='Register')
 					<label class="grey" for="password">Password:</label>
 					<input class="field" type="password" name="password" id="email" size="23" />
 				
-					<label class="radio" for="UserType">Which of these describe you?</label>
+					<label class="radio" for="UserType">Which of these describes you?</label>
 					<input class="radio" type="radio" name="user_type" value="User" checked /> <span>User</span>
 					<input class="radio" type="radio" name="user_type" value="Designer" /> <span>Designer</span>
 					<P>	
