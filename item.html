@@ -1,9 +1,3 @@
-<?php
-
-session_name('tzLogin');
-session_set_cookie_params(2*7*24*60*60);
-session_start();
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -31,21 +25,17 @@ session_start();
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
-				<div class="container top-navbar">
-					<a class="brand" href="#">Project name</a>
-<!-- 					<form class="navbar-form pull-right">
-						<input class="span2" type="text" placeholder="Email">
-						<input class="span2" type="password" placeholder="Password">
-						<button type="submit" class="btn">Sign in</button>
-					</form> -->
+				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
 							<li><a href="#">Sign In</a></li>
-							<li><a href="/signup.html">Sign Up</a></li>
+							<li><a href="/signup.php">Sign Up</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
-				<div class="container">
+				<div class="container top-navbar">
+					<a class="brand" href="#">Project name</a>
+
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -76,23 +66,32 @@ session_start();
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
-<?php if ($_SESSION['id']) { ?>
-
-<h1>Hello, <?php echo $_SESSION['usr'] ?> This your proile!</h1>
-Here are your details:
-<br/>
-First Name <?php echo $_SESSION['firstname'] ?>
-<br/>
-Last Name <?php echo $_SESSION['lastname'] ?>
-
-<?php } else {?>
-<h1>you are not logged in!</h1>
-
-<?php } ?>
+				<section class="pull-left">
+					<img src="/img/item.jpg" alt="item"/>
+					<div class="item-review">Review
+						<span class="review1"></span>
+						<span class="review1"></span>
+						<span class="review1"></span>
+						<span class="review1"></span>
+						<span class="review0"></span>
+					</div>
+				</section>
+				<section class="item-details pull-left">
+					<ul>
+						<li>Owner<span></span></li>
+						<li>Price<span></span></li>
+						<li>Available<span></span></li>
+						<li>Dry Cleaner<span></span></li>
+						<li>Up for Sale<span></span></li>
+						<li>Location<span></span></li>
+					</ul>
+					<div class="item-options">
+						<a class="rent-now-btn" href="">Rent Now</a>
+						<a class="save-for-late" href="">Save for Later</a>
+					</div>
+				</section>
 			</div>
-
-			
-
+			<div style="clear:both"></div>
 			<hr>
 
 			<footer>
