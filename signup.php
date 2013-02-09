@@ -111,10 +111,11 @@ else if($_POST['submit']=='Register')
 		$_POST['username'] = mysql_real_escape_string($_POST['username']);
 		$_POST['firstname'] = mysql_real_escape_string($_POST['firstname']);
 		$_POST['lastname'] = mysql_real_escape_string($_POST['lastname']);
+		$_POST['user_type'] = mysql_real_escape_string($_POST['user_type']);
 		// Escape the input data
 		
 		
-		mysql_query("	INSERT INTO tz_members(usr,firstname,lastname,pass,email,regIP,dt)
+		mysql_query("	INSERT INTO tz_members(usr,firstname,lastname,pass,email,regIP,user_type,dt)
 						VALUES(
 						
 							'".$_POST['username']."',
@@ -123,6 +124,7 @@ else if($_POST['submit']=='Register')
 							'".md5($_POST['password'])."',
 							'".$_POST['email']."',
 							'".$_SERVER['REMOTE_ADDR']."',
+							'".$_POST['user_type']."',
 							NOW()
 							
 						)");
@@ -243,6 +245,11 @@ else if($_POST['submit']=='Register')
 					<input class="field" type="text" name="email" id="email" size="23" />
 					<label class="grey" for="password">Password:</label>
 					<input class="field" type="password" name="password" id="email" size="23" />
+				
+					<label class="radio" for="UserType">Which of these describe you?</label>
+					<input class="radio" type="radio" name="user_type" value="User" checked /> <span>User</span>
+					<input class="radio" type="radio" name="user_type" value="Designer" /> <span>Designer</span>
+					<P>	
 					<input type="submit" name="submit" value="Register" class="bt_register" />
 				</form>
 			</div>
