@@ -226,7 +226,7 @@ textarea {
 body {
 	margin: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	line-height: 20px;
 	color: #000;
 	background-color: #F5F4F1;
@@ -326,7 +326,7 @@ a:hover {
 }
 
 .span4 {
-	width: 300px;
+	width: 130px;
 }
 
 .span3 {
@@ -4315,7 +4315,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .top-navbar {
-	background: url(../img/header.jpg) no-repeat 160px -10px;
+	background: url(../img/header.jpg) no-repeat 325px -12px;
 }
 
 .navbar {
@@ -4355,11 +4355,10 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
 	display: block;
 	float: left;
-	padding: 10px 20px 10px;
 	background: url('../img/logo.jpg') no-repeat;
 	text-indent: -10000px;
-	width: 120px;
-	height: 80px;
+	width: 200px;
+	height: 140px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 
@@ -4539,6 +4538,10 @@ input[type="submit"].btn.btn-mini {
 	margin: 0;
 }
 
+.mainmenu {
+	top: 95px;
+}
+
 .navbar .nav.pull-right {
 	float: right;
 	margin-right: 0;
@@ -4550,13 +4553,13 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a {
 	float: none;
-	padding: 10px 25px 10px;
+	padding: 10px 13px 10px;
 	color: #000;
 	text-decoration: none;
 	text-shadow: 0 1px 0 #ffffff;
 	font-family: 'Quicksand', sans-serif;
 	text-transform: uppercase;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: 300;
 }
 
@@ -6001,13 +6004,13 @@ a.badge:hover {
 .hero-unit {
 	padding: 60px;
 	margin-bottom: 30px;
-	font-size: 18px;
 	font-weight: 200;
 	line-height: 30px;
 	color: inherit;
 	-webkit-border-radius: 6px;
 		 -moz-border-radius: 6px;
 					border-radius: 6px;
+	text-align: justify;
 }
 
 .hero-unit h1 {

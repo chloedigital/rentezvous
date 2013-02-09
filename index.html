@@ -25,13 +25,7 @@
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
-				<div class="container top-navbar">
-					<a class="brand" href="#">Project name</a>
-<!-- 					<form class="navbar-form pull-right">
-						<input class="span2" type="text" placeholder="Email">
-						<input class="span2" type="password" placeholder="Password">
-						<button type="submit" class="btn">Sign in</button>
-					</form> -->
+				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
 							<li><a href="#">Sign In</a></li>
@@ -39,16 +33,25 @@
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
-				<div class="container">
+				<div class="container top-navbar">
+					<a class="brand" href="#">Project name</a>
+
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
 					<div class="nav-collapse collapse">
-						<ul class="nav">
+						<ul class="nav mainmenu">
 							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#about">How It Works</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Concept</a></li>
+									<li><a href="#">Process</a></li>
+									<li><a href="#">Targeted Brands</a></li>
+								</ul>
+							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
 								<ul class="dropdown-menu">
