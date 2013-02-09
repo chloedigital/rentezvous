@@ -124,3 +124,11 @@
 	width: 670px;
 	padding: 0px;
 }
+
+.sign .hero-unit {
+	background: url(../img/imagesignup.jpg) no-repeat;
+	margin: 0px auto;
+	width: 600px;
+	height: 320px;
+	padding: 120px;
+}

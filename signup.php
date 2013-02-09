@@ -165,33 +165,42 @@ else if($_POST['submit']=='Register')
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body>
+	<body class="sign">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
 		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
-				<div class="container top-navbar">
-					<a class="brand" href="#">Project name</a>
+				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
 							<li><a href="#">Sign In</a></li>
-							<li><a href="#about">Sign Up</a></li>
+							<li><a href="/signup.php">Sign Up</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
-				<div class="container">
+				<div class="container top-navbar">
+					<a class="brand" href="#">Project name</a>
+
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
 					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#about">How It Works</a></li>
+						<ul class="nav mainmenu">
+							<li ><a href="#">Home</a></li>
+							<li class="active dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Concept</a></li>
+									<li><a href="#">Process</a></li>
+									<li><a href="#">Targeted Brands</a></li>
+								</ul>
+							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
 								<ul class="dropdown-menu">
@@ -209,16 +218,15 @@ else if($_POST['submit']=='Register')
 			</div>
 		</div>
 
+
 		<div class="container">
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
 				<h1>Sign Up</h1>
-				<p>Intro to this page</p>
 			<div class="left right">			
 				<!-- Register Form -->
 				<form action="" method="post">
-					<h1>Hello <?php echo $_SESSION['usr'] ? $_SESSION['usr'] : 'Guest, Sign up';?>!</h1></h1>		
                     
                     <?php
 						
