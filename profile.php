@@ -1,3 +1,9 @@
+<?php
+
+session_name('tzLogin');
+session_set_cookie_params(2*7*24*60*60);
+session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -35,7 +41,7 @@
 					<div class="nav-signin pull-right">
 						<ul class="nav">
 							<li><a href="#">Sign In</a></li>
-							<li><a href="/signup.php">Sign Up</a></li>
+							<li><a href="/signup.html">Sign Up</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -70,29 +76,22 @@
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
-				<h1>Hello, world!</h1>
-				<p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-				<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<?php if ($_SESSION['id']) { ?>
+
+<h1>Hello, <?php echo $_SESSION['usr'] ?> This your proile!</h1>
+Here are your details:
+<br/>
+First Name <?php echo $_SESSION['firstname'] ?>
+<br/>
+Last Name <?php echo $_SESSION['lastname'] ?>
+
+<?php } else {?>
+<h1>you are not logged in!</h1>
+
+<?php } ?>
 			</div>
 
-			<!-- Example row of columns -->
-			<div class="row">
-				<div class="span4">
-					<h2>Heading</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn" href="#">View details &raquo;</a></p>
-				</div>
-				<div class="span4">
-					<h2>Heading</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn" href="#">View details &raquo;</a></p>
-			   </div>
-				<div class="span4">
-					<h2>Heading</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-					<p><a class="btn" href="#">View details &raquo;</a></p>
-				</div>
-			</div>
+			
 
 			<hr>
 
