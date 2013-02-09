@@ -1,9 +1,3 @@
-<?php
-
-session_name('tzLogin');
-session_set_cookie_params(2*7*24*60*60);
-session_start();
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -22,7 +16,7 @@ session_start();
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body>
+	<body class="hiw">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
@@ -53,9 +47,9 @@ session_start();
 							<li class="active dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Concept</a></li>
-									<li><a href="#">Process</a></li>
-									<li><a href="#">Targeted Brands</a></li>
+									<li><a href="/concept.html">Concept</a></li>
+									<li><a href="/process.html">Process</a></li>
+									<li><a href="/designers.html">Targeted Brands</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -75,28 +69,26 @@ session_start();
 			</div>
 		</div>
 
-
 		<div class="container">
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
-			<div class="hero-unit">
-<?php if ($_SESSION['id']) { ?>
-
-<h1>Hello, <?php echo $_SESSION['usr'] ?> This your proile!</h1>
-Here are your details:
-<br/>
-First Name <?php echo $_SESSION['firstname'] ?>
-<br/>
-Last Name <?php echo $_SESSION['lastname'] ?>
-
-<?php } else {?>
-<h1>you are not logged in!</h1>
-
-<?php } ?>
+			<div class="pull-left sidemenu process">
+					<h2>Process - Designer</h2>
+					<p>
+						You are an emerging designer and need more visibility?
+						<ul>
+							<li>1) Drop us a mail and let us know about your work
+							If you are selected, you will be entitled to get a garment rail at a Rentez-Vous event. A deposit from the users is required and you have a dry cleaner option if you wish to.</li>
+							<li>2) Get the benefits of your rentals and get in touch with us to recover your clean clothes!</li>
+							<li>3) “Try before you buy ” option : people can buy your creations after having rented them. We take 10% fee on each
+ 							transaction.</li>
+						</ul>
+					</p>
 			</div>
-
-			
-
+			<div class="hero-unit pull-right">
+				<img src="img/hiw/designer.jpg" alt="designer"/>
+			</div>
+			<div style="clear:both"></div>
 			<hr>
 
 			<footer>

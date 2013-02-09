@@ -4482,13 +4482,6 @@ input[type="submit"].btn.btn-mini {
 					border-radius: 0;
 }
 
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-	right: 0;
-	left: 0;
-	z-index: 1030;
-	margin-bottom: 0;
-}
 
 .navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner {

@@ -1,9 +1,3 @@
-<?php
-
-session_name('tzLogin');
-session_set_cookie_params(2*7*24*60*60);
-session_start();
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -75,28 +69,22 @@ session_start();
 			</div>
 		</div>
 
-
 		<div class="container">
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
-			<div class="hero-unit">
-<?php if ($_SESSION['id']) { ?>
-
-<h1>Hello, <?php echo $_SESSION['usr'] ?> This your proile!</h1>
-Here are your details:
-<br/>
-First Name <?php echo $_SESSION['firstname'] ?>
-<br/>
-Last Name <?php echo $_SESSION['lastname'] ?>
-
-<?php } else {?>
-<h1>you are not logged in!</h1>
-
-<?php } ?>
+			<div class="pull-left sidemenu process processmain">
+					<h2>Process</h2>
+					<ul>
+						<li><a href="/owner.html">Owner</a></li>
+						<li><a href="/renter.html">Renter</a></li>
+						<li><a href="/designer.html">Designer</a></li>
+					</ul>
+					
 			</div>
-
-			
-
+			<div class="hero-unit pull-right">
+				<img src="img/hiw/process.jpg" alt="process"/>
+			</div>
+			<div style="clear:both"></div>
 			<hr>
 
 			<footer>
