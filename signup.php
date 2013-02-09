@@ -168,7 +168,7 @@ else if($_POST['submit']=='Register')
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body class="sign signup">
+	<body class="sign">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
@@ -257,21 +257,19 @@ else if($_POST['submit']=='Register')
 					<label class="grey" for="password">Password:</label>
 					<input class="field" type="password" name="password" id="email" size="23" />
 				
-					<label class="radio" for="UserType">Which of these describes you?</label>
+					<label class="radio" for="UserType">Which of these describe you?</label>
 					<input class="radio" type="radio" name="user_type" value="User" checked /> <span>User</span>
 					<input class="radio" type="radio" name="user_type" value="Designer" /> <span>Designer</span>
-					    <fieldset class="right">
-        <legend>Image local manipulation</legend>
-        <p>Enter a local file name (absolute or relative) for a small image, and press "process" </p>
-        <form name="form4" enctype="multipart/form-data" method="post" action="upload.php" />
-            <p><input type="text" size="32" name="my_field" value="test.png" /></p>
-            <p class="button"><input type="hidden" name="action" value="local" />
-            <input type="submit" name="Submit" value="process" /></p>
+				    <fieldset class="left">
+        <legend>Upload your Profile image</legend>
+        <p>Pick up a file to upload, and press "upload" </p>
+        <form name="form1" enctype="multipart/form-data" method="post" action="profileimg.php" />
+            <p><input type="file" size="32" name="my_field" value="" /></p>
+            <p class="button"><input type="hidden" name="action" value="simple" />
+            <input type="submit" name="Submit" value="upload" /></p>
+        
         </form>
     </fieldset>
-					<P>	
-					<input type="submit" name="submit" value="Register" class="bt_register" />
-				</form>
 			</div>
 			</div>
 
@@ -305,7 +303,7 @@ else if($_POST['submit']=='Register')
               document.getElementById(e).innerHTML = xhr.responseText;
             }
           }
-          xhr.open("POST", "upload.php?action=xhr");
+          xhr.open("POST", "./class.upload/upload.php?action=xhr");
           xhr.setRequestHeader("Cache-Control", "no-cache");
           xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
           xhr.setRequestHeader("X-File-Name", f.name);
