@@ -215,10 +215,10 @@ else if($_POST['submit']=='Register')
 			</div>
 		</div>
 
-
 		<div class="container">
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
+
 			<div class="hero-unit">
 				<h1>Sign Up</h1>
 			<div class="left right">			
@@ -254,16 +254,17 @@ else if($_POST['submit']=='Register')
 					<label class="radio" for="UserType">Which of these describe you?</label>
 					<input class="radio" type="radio" name="user_type" value="User" checked /> <span>User</span>
 					<input class="radio" type="radio" name="user_type" value="Designer" /> <span>Designer</span>
-				    <fieldset class="left">
-        <legend>Upload your Profile image</legend>
+           
+    <input type="submit" name="submit" value="Register" class="bt_register" />
+            </form>
+
+     <legend>Upload your Profile image</legend>
         <p>Pick up a file to upload, and press "upload" </p>
-        <form name="form1" enctype="multipart/form-data" method="post" action="profileimg.php" />
+        <form name="form1" enctype="multipart/form-data" method="post" action="./class.upload/profileimg.php" />
             <p><input type="file" size="32" name="my_field" value="" /></p>
             <p class="button"><input type="hidden" name="action" value="simple" />
             <input type="submit" name="Submit" value="upload" /></p>
-        
         </form>
-    </fieldset>
 			</div>
 			</div>
 
@@ -289,15 +290,19 @@ else if($_POST['submit']=='Register')
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)}(document,'script'));
-			
-			      function xhr_send(f, e) {
+
+		</script>
+		<script type="text/javascript">
+			          window.onload = function () {
+
+      function xhr_send(f, e) {
         if (f) {
           xhr.onreadystatechange = function(){
             if(xhr.readyState == 4){
               document.getElementById(e).innerHTML = xhr.responseText;
             }
           }
-          xhr.open("POST", "./class.upload/upload.php?action=xhr");
+          xhr.open("POST", "profileimg.php?action=xhr");
           xhr.setRequestHeader("Cache-Control", "no-cache");
           xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
           xhr.setRequestHeader("X-File-Name", f.name);
@@ -361,7 +366,7 @@ else if($_POST['submit']=='Register')
 
       }
     }
-		</script>
+        </script>
 	</body>
 	<?php $mysqli->close(); ?>
 </html>
