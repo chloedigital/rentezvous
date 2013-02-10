@@ -68,6 +68,9 @@ if($_POST['submit']=='Login')
 			// Store some data in the session
 			
 			setcookie('tzRemember',$_POST['rememberMe']);
+			header("Location: rent.html");
+		        exit;
+
 		}
 		else $err[]='Wrong username and/or password!';
 	}
