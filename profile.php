@@ -85,7 +85,7 @@ session_start();
 </div>
 <div class="pull-right">
 <h1>Hello <?php echo $_SESSION['usr'] ?>,<h1>
-<h2>This your basic proile!</h2>
+<h2>This your basic profile!</h2>
 </div>
 <div style="clear:both"></div>
 <?php } else {?>

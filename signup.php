@@ -258,6 +258,7 @@ else if($_POST['submit']=='Register')
     <input type="submit" name="submit" value="Register" class="bt_register" />
             </form>
 
+	<div style="display:none">
      <legend>Upload your Profile image</legend>
         <p>Pick up a file to upload, and press "upload" </p>
         <form name="form1" enctype="multipart/form-data" method="post" action="./class.upload/profileimg.php" />
@@ -265,6 +266,7 @@ else if($_POST['submit']=='Register')
             <p class="button"><input type="hidden" name="action" value="simple" />
             <input type="submit" name="Submit" value="upload" /></p>
         </form>
+			</div>
 			</div>
 			</div>
 
