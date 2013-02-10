@@ -22,12 +22,12 @@ session_start();
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body class="coming-soon">
+	<body class="home">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.php -->
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
@@ -49,31 +49,39 @@ session_start();
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav mainmenu">
-							<li class=""><a href="/">Home</a></li>
+							<li class="active"><a href="/">Home</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="/concept.html">Concept</a></li>
-									<li><a href="/process.html">Process</a></li>
-									<li><a href="/targetedbrands.html">Targeted Brands</a></li>
+									<li><a href="/concept.php">Concept</a></li>
+									<li><a href="/process.php">Process</a></li>
+									<li><a href="/targetedbrands.php">Targeted Brands</a></li>
 								</ul>
 							</li>
-							<li class="active"><a href="/events.html">Events</a></li>
-							<li><a href="/designers.html">Designers</a></li>
-							<li><a href="/gallery.html">Gallery</a></li>
-							<li><a href="/press.html">Press</a></li>
-							<li id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
+							<li><a href="/events.php">Events</a></li>
+							<li><a href="/designers.php">Designers</a></li>
+							<li><a href="/gallery.php">Gallery</a></li>
+							<li><a href="/press.php">Press</a></li>
+							<li id="rent-now-btn"><a href="/rent.php"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container-main container">
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
-				<img src="img/comingsoon.jpg" alt="coming-soon"/>
+				<h2>What is it</h2>
+				<p>“ I have a wardrobe full of clothes but have nothing to wear!”. Instead of over consuming, why not renting and fully enjoying what we have?
+
+Rentez-Vous is a new clothing rental concept, based in Paris and London, that allows girls to rent their own  clothes to others and get money from their wardrobe.
+
+Be prepared to see your clothes differently and never wear the same thing twice!
+
+</p>
+				<a href="#"><img src="img/appbtn.jpg"/></a>
 			</div>
 
 			<hr>

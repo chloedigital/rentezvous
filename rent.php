@@ -40,15 +40,19 @@ session_start();
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.php -->
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
+							<?php if ($_SESSION['id']) { ?>
+							<li><a href="/profile.php">Profile</a></li>
+							<?php } else { ?>
 							<li><a href="/signin.php">Sign In</a></li>
 							<li><a href="/signup.php">Sign Up</a></li>
+							<?php } ?>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -66,22 +70,22 @@ session_start();
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="/concept.html">Concept</a></li>
-									<li><a href="/process.html">Process</a></li>
-									<li><a href="/targetedbrands.html">Targeted Brands</a></li>
+									<li><a href="/concept.php">Concept</a></li>
+									<li><a href="/process.php">Process</a></li>
+									<li><a href="/targetedbrands.php">Targeted Brands</a></li>
 								</ul>
 							</li>
-							<li><a href="/events.html">Events</a></li>
-							<li><a href="/designers.html">Designers</a></li>
-							<li><a href="/gallery.html">Gallery</a></li>
-							<li><a href="/press.html">Press</a></li>
-							<li class="active" id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
+							<li><a href="/events.php">Events</a></li>
+							<li><a href="/designers.php">Designers</a></li>
+							<li><a href="/gallery.php">Gallery</a></li>
+							<li><a href="/press.php">Press</a></li>
+							<li class="active" id="rent-now-btn"><a href="/rent.php"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
 		</div>
-<?php if ($_SESSION['id']) { ?>
+<?php if ($_SESSION['usr']) { ?>
 		<div class="container">
 
 			<!-- Example row of columns -->

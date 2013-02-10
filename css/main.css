@@ -156,3 +156,8 @@
 margin: 0px auto;
 width: 490px;
 }
+
+
+.home .container-main{
+	background: url(../img/home.jpg) no-repeat 65px -50px;
+}

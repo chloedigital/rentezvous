@@ -22,20 +22,24 @@ session_start();
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body>
+	<body class="coming-soon">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.php -->
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
+							<?php if ($_SESSION['id']) { ?>
+							<li><a href="/profile.php">Profile</a></li>
+							<?php } else { ?>
 							<li><a href="/signin.php">Sign In</a></li>
 							<li><a href="/signup.php">Sign Up</a></li>
+							<?php } ?>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -53,16 +57,16 @@ session_start();
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="/concept.html">Concept</a></li>
-									<li><a href="/process.html">Process</a></li>
-									<li><a href="/targetedbrands.html">Targeted Brands</a></li>
+									<li><a href="/concept.php">Concept</a></li>
+									<li><a href="/process.php">Process</a></li>
+									<li><a href="/targetedbrands.php">Targeted Brands</a></li>
 								</ul>
 							</li>
-							<li><a href="/events.html">Events</a></li>
-							<li><a href="/designers.html">Designers</a></li>
-							<li><a href="/gallery.html">Gallery</a></li>
-							<li><a href="/press.html">Press</a></li>
-							<li id="rent-now-btn" class="active"><a href="/rent.html"><strong>Rent Now</strong></a></li>
+							<li><a href="/events.php">Events</a></li>
+							<li class="active"><a href="/designers.php">Designers</a></li>
+							<li><a href="/gallery.php">Gallery</a></li>
+							<li><a href="/press.php">Press</a></li>
+							<li id="rent-now-btn"><a href="/rent.php"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -73,32 +77,9 @@ session_start();
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
-				<section class="pull-left">
-					<img src="/img/item.jpg" alt="item"/>
-					<div class="item-review">Review
-						<span class="review1"></span>
-						<span class="review1"></span>
-						<span class="review1"></span>
-						<span class="review1"></span>
-						<span class="review0"></span>
-					</div>
-				</section>
-				<section class="item-details pull-left">
-					<ul>
-						<li>Owner<span></span></li>
-						<li>Price<span></span></li>
-						<li>Available<span></span></li>
-						<li>Dry Cleaner<span></span></li>
-						<li>Up for Sale<span></span></li>
-						<li>Location<span></span></li>
-					</ul>
-					<div class="item-options">
-						<a class="rent-now-btn" href="">Rent Now</a>
-						<a class="save-for-late" href="">Save for Later</a>
-					</div>
-				</section>
+				<img src="img/comingsoon.jpg" alt="coming-soon"/>
 			</div>
-			<div style="clear:both"></div>
+
 			<hr>
 
 			<footer>
