@@ -159,5 +159,10 @@ width: 490px;
 
 
 .home .container-main{
-	background: url(../img/home.jpg) no-repeat 65px -50px;
+	background: url(../img/home.jpg) no-repeat 85px -20px;
+}
+
+.home .hero-unit {
+	width: 340px;
+	padding:170px 0px 0px;
 }
