@@ -1,3 +1,9 @@
+<?php
+
+session_name('tzLogin');
+session_set_cookie_params(2*7*24*60*60);
+session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -28,7 +34,7 @@
 				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
-							<li><a href="#">Sign In</a></li>
+							<li><a href="/signin.php">Sign In</a></li>
 							<li><a href="/signup.php">Sign Up</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
@@ -43,26 +49,20 @@
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav mainmenu">
-							<li ><a href="#">Home</a></li>
-							<li class="active dropdown">
+							<li class=""><a href="/">Home</a></li>
+							<li class="dropdown active">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Concept</a></li>
-									<li><a href="#">Process</a></li>
-									<li><a href="#">Targeted Brands</a></li>
+									<li><a href="/concept.html">Concept</a></li>
+									<li><a href="/process.html">Process</a></li>
+									<li><a href="/targetedbrands.html">Targeted Brands</a></li>
 								</ul>
 							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Agenda</a></li>
-									<li><a href="#">Dropping Points</a></li>
-								</ul>
-							</li>
-							<li><a href="#contact">Designers</a></li>
-							<li><a href="#contact">Gallery</a></li>
-							<li><a href="#contact">Press</a></li>
-							<li id="rent-now-btn"><a href="#contact"><strong>Rent Now</strong></a></li>
+							<li><a href="/events.html">Events</a></li>
+							<li><a href="/designers.html">Designers</a></li>
+							<li><a href="/gallery.html">Gallery</a></li>
+							<li><a href="/press.html">Press</a></li>
+							<li id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>

@@ -19,23 +19,10 @@ session_start();
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/bootstrap-responsive.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/shadowbox.css">
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		<script src="js/shadowbox.js"></script>
-		<script>
-			Shadowbox.init({
-			    handleOversize: "drag",
-			    modal: false
-			});
-
-
-
-
-			
-		</script>
 	</head>
-	<body class="itemgallery">
+	<body class="press">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
@@ -62,7 +49,7 @@ session_start();
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav mainmenu">
-							<li><a href="/">Home</a></li>
+							<li class=""><a href="/">Home</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
@@ -74,98 +61,23 @@ session_start();
 							<li><a href="/events.html">Events</a></li>
 							<li><a href="/designers.html">Designers</a></li>
 							<li><a href="/gallery.html">Gallery</a></li>
-							<li><a href="/press.html">Press</a></li>
-							<li class="active" id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
+							<li class="active"><a href="/press.html">Press</a></li>
+							<li id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
 		</div>
-<?php if ($_SESSION['id']) { ?>
+
 		<div class="container">
 
-			<!-- Example row of columns -->
-			<div class="sidemenu filter pull-left">
-				<h2>Search</h2>
-				<ul>
-					<li>Category</li>
-					<li>Size</li>
-					<li>Brand</li>
-					<li>Location</li>
-				</ul>
+			<!-- Main hero unit for a primary marketing message or call to action -->
+			<div class="hero-unit">
+				<img src="img/press.jpg" alt="press"/>
 			</div>
-			<div class="row pull-right">
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-						<img src="img/itemgallery/1.jpg" alt="item"/>
-					</a>
-					<span class="rented"></span>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
 
-					<img src="img/itemgallery/2.jpg" alt="item"/>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/3.jpg" alt="item"/>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/4.jpg" alt="item"/>
-					<span class="rented"></span>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/5.jpg" alt="item"/>
-					<span class="rented"></span>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/6.jpg" alt="item"/>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/7.jpg" alt="item"/>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/8.jpg" alt="item"/>
-					<span class="rented"></span>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/9.jpg" alt="item"/>
-					</a>
-				</div>
-				<div class="span4">
-					<a href="#box" rel="shadowbox;width=801;height=634" class="thankyou">
-
-					<img src="img/itemgallery/10.jpg" alt="item"/></a>
-				</div>
-			</div>
-			<div style="clear:both"></div>
-			<?php } else {?>
-			<h1>you are not logged in!</h1>
-
-			<?php } ?>
 			<hr>
-			<div id="box" style="display:none"><div class="box-content"><span><?php echo $_SESSION['usr'] ?></span></div></div>
+
 			<footer>
 				<p>&copy; Rentez - Vous 2013</p>
 			</footer>

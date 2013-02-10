@@ -113,6 +113,12 @@
 	right: 10px;
 	background: url(../img/rented.png);
 }
+
+.itemgallery .box-content {
+	background: url(../img/thankyou.jpg) no-repeat;
+	width: 801px;
+	height: 634px;
+}
 .concept-intro{
 	font-size: 1.6rem;
 	text-align: center;
@@ -134,8 +140,19 @@
 }
 
 .signup .hero-unit{
-	background: url(../img/imagesignup.jpg) no-repeat -8px 0px;
-	width: 600px;
+	background: url(../img/imagesignup.jpg) no-repeat -25px 0px;
+	width: 750px;
 	height: 510px;
-	padding: 50px 0 0 60px;
+	padding: 50px 0 0 53px;
+}
+
+.profile .hero-unit {
+	padding: 70px 0;
+	margin: 0px auto;
+	width: 480px;
+}
+
+.coming-soon .hero-unit {
+margin: 0px auto;
+width: 490px;
 }

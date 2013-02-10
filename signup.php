@@ -168,7 +168,7 @@ else if($_POST['submit']=='Register')
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body class="sign">
+	<body class="sign signup">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
@@ -180,7 +180,7 @@ else if($_POST['submit']=='Register')
 				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
-							<li><a href="#">Sign In</a></li>
+							<li><a href="/signin.php">Sign In</a></li>
 							<li><a href="/signup.php">Sign Up</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
@@ -195,26 +195,20 @@ else if($_POST['submit']=='Register')
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav mainmenu">
-							<li ><a href="#">Home</a></li>
-							<li class="active dropdown">
+							<li><a href="/">Home</a></li>
+							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Concept</a></li>
-									<li><a href="#">Process</a></li>
-									<li><a href="#">Targeted Brands</a></li>
+									<li><a href="/concept.html">Concept</a></li>
+									<li><a href="/process.html">Process</a></li>
+									<li><a href="/targetedbrands.html">Targeted Brands</a></li>
 								</ul>
 							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Agenda</a></li>
-									<li><a href="#">Dropping Points</a></li>
-								</ul>
-							</li>
-							<li><a href="#contact">Designers</a></li>
-							<li><a href="#contact">Gallery</a></li>
-							<li><a href="#contact">Press</a></li>
-							<li id="rent-now-btn"><a href="#contact"><strong>Rent Now</strong></a></li>
+							<li><a href="/events.html">Events</a></li>
+							<li><a href="/designers.html">Designers</a></li>
+							<li><a href="/gallery.html">Gallery</a></li>
+							<li><a href="/press.html">Press</a></li>
+							<li id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>

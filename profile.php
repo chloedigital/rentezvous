@@ -22,7 +22,7 @@ session_start();
 
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body>
+	<body class="profile">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
@@ -34,8 +34,7 @@ session_start();
 				<div class="container">
 					<div class="nav-signin pull-right">
 						<ul class="nav">
-							<li><a href="#">Sign In</a></li>
-							<li><a href="/signup.php">Sign Up</a></li>
+							<li><a href="/profile.php">Profile</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -49,26 +48,20 @@ session_start();
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav mainmenu">
-							<li ><a href="#">Home</a></li>
-							<li class="active dropdown">
+							<li><a href="/">Home</a></li>
+							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Concept</a></li>
-									<li><a href="#">Process</a></li>
-									<li><a href="#">Targeted Brands</a></li>
+									<li><a href="/concept.html">Concept</a></li>
+									<li><a href="/process.html">Process</a></li>
+									<li><a href="/targetedbrands.html">Targeted Brands</a></li>
 								</ul>
 							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Agenda</a></li>
-									<li><a href="#">Dropping Points</a></li>
-								</ul>
-							</li>
-							<li><a href="#contact">Designers</a></li>
-							<li><a href="#contact">Gallery</a></li>
-							<li><a href="#contact">Press</a></li>
-							<li id="rent-now-btn"><a href="#contact"><strong>Rent Now</strong></a></li>
+							<li><a href="/events.html">Events</a></li>
+							<li><a href="/designers.html">Designers</a></li>
+							<li><a href="/gallery.html">Gallery</a></li>
+							<li><a href="/press.html">Press</a></li>
+							<li id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -80,15 +73,16 @@ session_start();
 
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
+				
 <?php if ($_SESSION['id']) { ?>
-
-<h1>Hello, <?php echo $_SESSION['usr'] ?> This your proile!</h1>
-Here are your details:
-<br/>
-First Name <?php echo $_SESSION['firstname'] ?>
-<br/>
-Last Name <?php echo $_SESSION['lastname'] ?>
-
+<div class="pull-left">
+<img src="/img/annom.jpg" alt="profilepic"/>
+</div>
+<div class="pull-right">
+<h1>Hello <?php echo $_SESSION['usr'] ?>,<h1>
+<h2>This your basic proile!</h2>
+</div>
+<div style="clear:both"></div>
 <?php } else {?>
 <h1>you are not logged in!</h1>
 
