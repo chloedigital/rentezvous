@@ -119,6 +119,10 @@
 	width: 801px;
 	height: 634px;
 }
+.itemgallery .box-content h2{
+	padding-left: 340px;
+	padding-top: 280px;
+}
 .concept-intro{
 	font-size: 1.6rem;
 	text-align: center;

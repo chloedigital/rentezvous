@@ -169,7 +169,7 @@ session_start();
 
 			<?php } ?>
 			<hr>
-			<div id="box" style="display:none"><div class="box-content"><span><?php echo $_SESSION['usr'] ?></span></div></div>
+			<div id="box" style="display:none"><div class="box-content"><h2><?php echo $_SESSION['usr'] ?></h2></div></div>
 			<footer>
 				<p>&copy; Rentez - Vous 2013</p>
 			</footer>

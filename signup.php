@@ -134,7 +134,7 @@ else if($_POST['submit']=='Register')
 
 
 			$_SESSION['msg']['reg-success']= $pass;
-			header('Location: rent.html');
+			header('Location: rent.php');
 			exit;
 		}
 		else $err[]='This username is already taken!';
@@ -173,7 +173,7 @@ else if($_POST['submit']=='Register')
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.php -->
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
@@ -199,16 +199,16 @@ else if($_POST['submit']=='Register')
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">How It Works <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="/concept.html">Concept</a></li>
-									<li><a href="/process.html">Process</a></li>
-									<li><a href="/targetedbrands.html">Targeted Brands</a></li>
+									<li><a href="/concept.php">Concept</a></li>
+									<li><a href="/process.php">Process</a></li>
+									<li><a href="/targetedbrands.php">Targeted Brands</a></li>
 								</ul>
 							</li>
-							<li><a href="/events.html">Events</a></li>
-							<li><a href="/designers.html">Designers</a></li>
-							<li><a href="/gallery.html">Gallery</a></li>
-							<li><a href="/press.html">Press</a></li>
-							<li id="rent-now-btn"><a href="/rent.html"><strong>Rent Now</strong></a></li>
+							<li><a href="/events.php">Events</a></li>
+							<li><a href="/designers.php">Designers</a></li>
+							<li><a href="/gallery.php">Gallery</a></li>
+							<li><a href="/press.php">Press</a></li>
+							<li id="rent-now-btn"><a href="/rent.php"><strong>Rent Now</strong></a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
